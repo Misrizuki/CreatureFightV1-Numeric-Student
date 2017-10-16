@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Creature extends Actor
 {
-    
+    private HealthBar creatureBar;
+    private int healthNumber;
+    private int playerOwnership;
     /**
      * Default constructor for objects of the Creature class
      * 
@@ -17,8 +19,11 @@ public class Creature extends Actor
      */
     public Creature()
     {
-
+        healthNumber = 500;
+        playerOwnership = 0;
+        creatureBar = new HealthBar( healthNumber, healthNumber, 10);
     }
+        
 
     /**
      * Constructor that allows customization of objects of the Creature class
@@ -29,7 +34,19 @@ public class Creature extends Actor
      */
     public Creature( int health, int whichPlayer )
     {
-
+        healthNumber = health;
+        playerOwnership = whichPlayer;
+        creatureBar = new HealthBar( healthNumber, healthNumber, 10);
+    }
+    
+    protected HealthBar getHealthBar()
+    {
+        return creatureBar;
+    }
+    
+    public int getPlayerOwnership()
+    {
+        return playerOwnership;
     }
     
     /**
