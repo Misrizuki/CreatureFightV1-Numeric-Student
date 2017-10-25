@@ -8,10 +8,28 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Pikachu extends Creature
 {
+    private Creature enemy;
+    private String enemyType;
     
+    public void attack( int idx )
+    {
+     CreatureWorld world = (CreatureWorld)getWorld();
+     enemy = world.getPlayerOne();
+     enemyType = enemy.getType();
+     if ( idx == 0 )
+     {
+        enemy.getHealthBar().add(-25);
+     }
+     else
+     {
+        enemy.getHealthBar().add(-70); 
+     }
+     world.setTurnNumber(1);
+    }
+   
     public Pikachu( World w )
     {
-       super(700, 2);
+       super(700, 2, "Electric");
        
        getImage().scale(150,100);
        
