@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed Oct 25 14:21:54 CDT 2017
+#Thu Oct 26 14:30:38 CDT 2017
 target2.width=80
 editor.fx.0.height=700
 target8.name=Menu
@@ -101,10 +101,10 @@ target2.showInterface=false
 dependency1.from=CreatureWorld
 dependency25.from=CreatureWorld
 target15.type=ClassTarget
-mainWindow.y=71
+mainWindow.y=75
 editor.swing.0.y=-8
 target5.showInterface=false
-mainWindow.x=138
+mainWindow.x=388
 editor.swing.0.x=-8
 dependency19.from=SwitchCommands
 dependency16.to=TextBox
@@ -120,7 +120,7 @@ target14.y=370
 target13.typeParameters=
 target15.width=80
 target14.x=100
-editor.swing.0.width=1936
+editor.swing.0.width=1937
 target6.name=HealthBar
 target9.height=50
 dependency23.to=CreatureWorld

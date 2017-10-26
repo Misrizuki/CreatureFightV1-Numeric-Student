@@ -11,7 +11,7 @@ import java.util.List;
  * Course: CS20S
  * Teacher: Mr. Hardman
  * Lab #2, Program #1
- * Date Last Modified: 2:24 PM 10/25/2017
+ * Date Last Modified: 2:33 PM 10/26/2017
  *
  *
  * @author (your name) 

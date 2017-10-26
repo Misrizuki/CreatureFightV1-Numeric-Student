@@ -46,7 +46,6 @@ public class Charmander extends Creature
         if(getHealthBar().getCurrent() <=0)
         {
             getWorld().showText("Charmander has fainted...",getWorld().getWidth()/2,getWorld().getHeight()/2+26);
-            Greenfoot.delay(30);
         }
         
         Greenfoot.delay(30);
