@@ -10,15 +10,20 @@ public class Menu extends Actor
 {
     private TextBox titleBar;
     private TextBox menuItems;
+    
     private MenuCommands commands;
-    private int fontSize = 24;
+    
     private boolean visible = false;
+    
     private Color mainFG;
     private Color mainBG;
+    
     private Color secondFG;
     private Color secondBG;
+    
     private int titleHeight;
     private int menuHeight;
+    private int fontSize = 24;
     
     public Menu( String tb, String i, int fs, Color mfg, Color mbg, Color sfg, Color sbg, MenuCommands mc)
     {
@@ -63,6 +68,7 @@ public class Menu extends Actor
         
         if(world.getTurnNumber() == 1)
         {
+            
          if (titleBar.getText().equalsIgnoreCase("Fight"))
          {
            distance = 35;  
@@ -71,17 +77,19 @@ public class Menu extends Actor
          {
           distance = 195;   
          }
+         
         }
         else
         {
+            
           if (titleBar.getText().equalsIgnoreCase("Fight"))
-         {
-           distance = 362;  
-         }
-         else
-         {
-          distance = 195;   
-         }  
+          {
+              distance = 362;  
+          }
+          else
+          {
+              distance = 195;   
+          }  
          
         }
         

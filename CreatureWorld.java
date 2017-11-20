@@ -11,7 +11,7 @@ import java.util.List;
  * Course: CS20S
  * Teacher: Mr. Hardman
  * Lab #2, Program #1
- * Date Last Modified: 2:33 PM 10/26/2017
+ * Date Last Modified: 3:30 PM 11/1/2017
  *
  *
  * @author (your name) 
@@ -21,14 +21,22 @@ public class CreatureWorld extends World
 {
     private Creature playerOneCreature;
     private Creature playerTwoCreature;
+
     private int turnNumber;
+    
+    private boolean playerOneTurn;
+    private boolean start;
+    private boolean PlayerOneMenusAdded;
+    private boolean playerTwoMenusAdded;
+    
     private String playerOneName;
     private String playerTwoName;
+    
     private Menu oneFightMenu;
     private Menu oneSwitchMenu;
     private Menu twoFightMenu;
     private Menu twoSwitchMenu;
-    
+
     /**
      * Default constructor for objects of class MyWorld.
      * 
@@ -52,7 +60,7 @@ public class CreatureWorld extends World
     
     public int getTurnNumber()
     {
-        return turnNumber;   
+         return turnNumber;     
     }
     
     public void setTurnNumber( int turn )
@@ -88,7 +96,7 @@ public class CreatureWorld extends World
     {
         List allObjects = getObjects(null);
         
-        if (turnNumber == 0)
+        if (start == true )
         {
              playerOneName = JOptionPane.showInputDialog( "Player One, please enter your name:", null );
              playerTwoName = JOptionPane.showInputDialog( "Player Two, please enter your name:", null );
@@ -104,9 +112,10 @@ public class CreatureWorld extends World
              addObject( twoFightMenu,131,75);
              addObject( twoSwitchMenu,199,75);
              
-             turnNumber = 1;
+             start = false;
+             playerOneTurn = true;
         }
-        else if(turnNumber == 1)
+        else if(start == true )
         {
             showText(playerOneName + "'s turn",getWidth()/2,getHeight()/2);
             showText("",getWidth()/2,getHeight()/2 + 26);

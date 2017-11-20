@@ -13,24 +13,29 @@ public class Charmander extends Creature
     
     public void attack( int idx )
     {
-     CreatureWorld world = (CreatureWorld)getWorld();
-     enemy = world.getPlayerTwo();
-     enemyType = enemy.getType();
-     if ( idx == 0 )
-     {
+        CreatureWorld world = (CreatureWorld)getWorld();
+        
+        enemy = world.getPlayerTwo();
+        
+        enemyType = enemy.getType();
+        
+        if ( idx == 0 )
+        {
           enemy.getHealthBar().add(-25);
-     }
-     else
-     {
-          enemy.getHealthBar().add(-70); 
-     }
-     world.setTurnNumber(2);
+        }
+        else
+        {
+            enemy.getHealthBar().add(-70); 
+        }
+        world.setTurnNumber(true);
     }
     
     public Charmander( World w )
     {
-        super(700, 1,"Fire");
+        super(700, true ,"Fire");
+        
         getImage().scale(150,100);
+        
         w.addObject( getHealthBar(), 300, w.getHeight() - 50 );
     }
     

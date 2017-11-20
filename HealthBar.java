@@ -183,6 +183,7 @@ public class HealthBar extends Actor
         {
             target = 0;
         }
+        
     }
 
     /**
